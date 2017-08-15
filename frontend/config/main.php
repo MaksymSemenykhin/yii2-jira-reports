@@ -12,9 +12,9 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
-        'request' => [
-            'csrfParam' => '_csrf-frontend',
-        ],
+//        'request' => [
+//            'csrfParam' => '_csrf-frontend',
+//        ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
@@ -36,14 +36,15 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'worklogs/queue/<queueId:\d+>/' => 'worklogs/queue',
+                
             ],
         ],
-        */
+  
     ],
     'params' => $params,
 ];
